@@ -24,7 +24,7 @@ public class HelloController {
 		// (faz mais sentido inclusive)
 		@Value("${spring.profiles.active:}")
 		private String activeProfile;
-
+		
 		@GetMapping("/hello")
 		public String helloPaidegua() {
 			return "Hellô Paidégua!!! Esta é a aplicação "

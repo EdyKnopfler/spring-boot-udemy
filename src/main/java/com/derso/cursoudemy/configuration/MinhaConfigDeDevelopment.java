@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Bean;
 public class MinhaConfigDeDevelopment {
 	
 	@Bean
-	public CommandLineRunner executar() {
+	public CommandLineRunner executarSoEmDevelopment() {
 		// Quando sobe o servidor isto deverá ser executado
 		return args -> {
 			System.out.println("RODANDO EM DESENVOLVIMENTO!!");
