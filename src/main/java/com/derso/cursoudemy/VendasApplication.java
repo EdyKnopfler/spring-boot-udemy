@@ -15,11 +15,6 @@ public class VendasApplication {
 		return "Hellô Paidégua!!!";
 	}
 	
-	@GetMapping("/")
-	public String helloRaiz() {
-		return "Hellô Raiz!!! Aqui num é nutela não";
-	}
-	
 	public static void main(String[] args) {
 		SpringApplication.run(VendasApplication.class, args);
 	}
