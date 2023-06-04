@@ -12,22 +12,27 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @RestController
 public class VendasApplication {
-	
+
 	// Via classe de configuração
 	@Autowired
 	@Qualifier("applicationName")
 	private String applicationName;
-	
+
 	// Via application.properties
 	@Value("${application.version}")
 	private String applicationVersion;
 	
+	// ${chave:default}
+	@Value("${spring.profiles.active:}")
+	private String activeProfile;
+
 	@GetMapping("/hello")
 	public String helloPaidegua() {
 		return "Hellô Paidégua!!! Esta é a aplicação "
-				+ applicationName + " (" + applicationVersion + ")";
+				+ applicationName + " (" + applicationVersion + ")\n"
+				+ "Perfil ativo: " + activeProfile;
 	}
-	
+
 	public static void main(String[] args) {
 		SpringApplication.run(VendasApplication.class, args);
 	}
