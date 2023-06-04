@@ -1,3 +1,4 @@
+// Quaisquer pacotes desta aplicação devem estar daqui para baixo!
 package com.derso.cursoudemy;
 
 import org.springframework.boot.SpringApplication;
@@ -18,7 +19,7 @@ public class VendasApplication {
 	public String helloRaiz() {
 		return "Hellô Raiz!!! Aqui num é nutela não";
 	}
-
+	
 	public static void main(String[] args) {
 		SpringApplication.run(VendasApplication.class, args);
 	}
