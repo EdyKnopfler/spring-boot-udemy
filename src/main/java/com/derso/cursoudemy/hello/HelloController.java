@@ -19,6 +19,9 @@ public class HelloController {
 		private String applicationVersion;
 		
 		// ${chave:default}
+		// Essa config especificamente só funcionou nas configs da VM
+		// -Dspring.profiles.active=development
+		// (faz mais sentido inclusive)
 		@Value("${spring.profiles.active:}")
 		private String activeProfile;
 
